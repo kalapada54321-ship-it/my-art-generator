@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0D0E11;
+    color: #F3F4F6;
+    user-select: none;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom studio scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #14161B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2E39;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3F4554;
+}
+
+/* Precision studio slider styling */
+input[type="range"].studio-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].studio-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: #2A2E39;
+}
+
+input[type="range"].studio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 3px;
+  background: #F59E0B;
+  border: 1px solid #FDE68A;
+  margin-top: -4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+input[type="range"].studio-slider::-webkit-slider-thumb:hover {
+  background: #FBBF24;
+  transform: scale(1.12);
+}
+
+/* Checkerboard transparency grid */
+.bg-checkerboard {
+  background-color: #16181D;
+  background-image: 
+    linear-gradient(45deg, #20232B 25%, transparent 25%), 
+    linear-gradient(-45deg, #20232B 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #20232B 75%), 
+    linear-gradient(-45deg, transparent 75%, #20232B 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+}
